@@ -3,7 +3,7 @@ replicas:
   hat: 2
 
 # uncomment this to disable legs on test...who needs legs anyway in test envs?
-legs_enabled: false
+legs_enabled: {{ args.force_legs }}
 
 podinfo:
   color: green

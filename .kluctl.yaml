@@ -23,5 +23,7 @@ args:
     default:
       color: blue
       replicas: 1
+  - name: force_legs
+    default: false
 
 discriminator: "podtato-head-{{ target.name }}-{{ args.env_name }}"
