@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: podinfo
   namespace: "{{ args.env_name }}-podinfo"
+  annotations:
+    validate-result.kluctl.io/podinfo: "http://{{ args.env_name }}.pod.info:{{ ingress_port }}"
 spec:
   ingressClassName: nginx
   rules:

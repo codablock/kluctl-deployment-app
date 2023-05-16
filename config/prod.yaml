@@ -6,3 +6,5 @@ podtato:
   image_name: ghcr.io/podtato-head/podtato-server
   # one version below the default version...we're on prod, so we're extra cautious :)
   tag: v0.3.0
+
+ingress_port: 9080

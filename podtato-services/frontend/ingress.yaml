@@ -2,10 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: podtato-head
+  annotations:
+    validate-result.kluctl.io/podinfo: "http://{{ args.env_name }}.podtato.head:{{ ingress_port }}"
 spec:
   ingressClassName: nginx
   rules:
-    - host: podtato.head
+    - host: {{ args.env_name }}.podtato.head
       http:
         paths:
           - path: /
