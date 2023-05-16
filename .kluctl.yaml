@@ -9,6 +9,10 @@ targets:
     args:
       env_type: prod
       env_name: prod
+  - name: preview
+    args:
+      env_type: non-prod
+    context: kind-test
 
 args:
   - name: image_name
