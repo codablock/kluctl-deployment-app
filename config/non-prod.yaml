@@ -6,6 +6,6 @@ replicas:
 legs_enabled: {{ args.force_legs }}
 
 podinfo:
-  color: green
+  color: blue
 
 ingress_port: 8080
