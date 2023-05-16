@@ -1,6 +1,7 @@
 resources:
   - deployment-frontend.yaml
   - service-frontend.yaml
+  - ingress.yaml
 
 patchesJson6902:
   - target:

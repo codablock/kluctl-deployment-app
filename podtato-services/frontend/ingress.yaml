@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: podtato-head
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: podtato.head
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: podtato-head-frontend
+                port:
+                  number: 9000

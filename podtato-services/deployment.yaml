@@ -21,7 +21,7 @@ deployments:
       - values:
           service:
             component: left-arm
-            port: 9014
+            port: 9003
   - path: template-service # right-leg
     when: legs_enabled     # but legs are only deployed if the target has legs enabled
     vars: [{"values": {"service": {"component": "right-leg", "port": 9004}}}] # we can also use json here
