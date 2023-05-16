@@ -12,6 +12,7 @@ targets:
   - name: preview
     args:
       env_type: non-prod
+      env_name: dummy
     context: kind-test
 
 args:
