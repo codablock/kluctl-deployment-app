@@ -7,3 +7,5 @@ legs_enabled: false
 
 podinfo:
   color: green
+
+ingress_port: 8080
