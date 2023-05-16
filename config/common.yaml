@@ -1,5 +1,5 @@
 replicas:
-  frontend: 1
+  frontend: 2
   hat: 1
   left-arm: 1
   left-leg: 1
