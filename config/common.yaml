@@ -11,3 +11,7 @@ legs_enabled: true
 podtato:
   image_name: {{ args.image_name }}
   tag: {{ args.image_version }}
+
+podinfo:
+  color: {{ args.podinfo.color }}
+  replicas: {{ args.podinfo.replicas }}

@@ -27,3 +27,6 @@ deployments:
     vars: [{"values": {"service": {"component": "right-leg", "port": 9004}}}] # we can also use json here
   - path: template-service # right-arm
     vars: [{"values": {"service": {"component": "right-arm", "port": 9005}}}] # we can also use json here
+
+# Sets the given namespace for all kustomizations that don't explicitly set it
+overrideNamespace: {{ args.env_name }}-podtato-kluctl
