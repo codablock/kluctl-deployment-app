@@ -14,6 +14,11 @@ targets:
       env_type: non-prod
       env_name: dummy
     context: kind-test
+  - name: eks
+    args:
+      env_type: non-prod
+      env_name: eks
+    context: kluctl-demo
 
 args:
   - name: image_name
