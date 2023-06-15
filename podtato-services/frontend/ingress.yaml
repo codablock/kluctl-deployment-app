@@ -3,11 +3,11 @@ kind: Ingress
 metadata:
   name: podtato-head
   annotations:
-    validate-result.kluctl.io/podinfo: "http://{{ args.env_name }}.podtato.head:{{ ingress_port }}"
+    validate-result.kluctl.io/podinfo: "http://{{ args.env_name }}.podtato.{{ base_dns }}"
 spec:
   ingressClassName: nginx
   rules:
-    - host: {{ args.env_name }}.podtato.head
+    - host: {{ args.env_name }}.podtato.{{ base_dns }}
       http:
         paths:
           - path: /
@@ -17,3 +17,7 @@ spec:
                 name: podtato-head-frontend
                 port:
                   number: 9000
+  tls:
+    - hosts:
+        - '{{ args.env_name }}.podtato.{{ base_dns }}'
+      secretName: 'ingress-cert'

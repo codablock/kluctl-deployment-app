@@ -15,3 +15,5 @@ podtato:
 podinfo:
   color: {{ args.podinfo.color }}
   replicas: {{ args.podinfo.replicas }}
+
+base_dns: kluctl-demo.kluctl.io

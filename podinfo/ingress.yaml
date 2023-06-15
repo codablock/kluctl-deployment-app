@@ -4,11 +4,11 @@ metadata:
   name: podinfo
   namespace: "{{ args.env_name }}-podinfo"
   annotations:
-    validate-result.kluctl.io/podinfo: "http://{{ args.env_name }}.pod.info:{{ ingress_port }}"
+    validate-result.kluctl.io/podinfo: "https://{{ args.env_name }}.podinfo.{{ base_dns }}"
 spec:
   ingressClassName: nginx
   rules:
-    - host: {{ args.env_name }}.pod.info
+    - host: {{ args.env_name }}.podinfo.{{ base_dns }}
       http:
         paths:
           - path: /
@@ -18,3 +18,7 @@ spec:
                 name: {{ args.env_name }}-podinfo
                 port:
                   number: 9898
+  tls:
+    - hosts:
+        - '{{ args.env_name }}.podinfo.{{ base_dns }}'
+      secretName: 'ingress-cert'

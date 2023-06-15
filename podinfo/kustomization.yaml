@@ -2,3 +2,4 @@ resources:
   - namespace.yaml
   - helm-rendered.yaml
   - ingress.yaml
+  - certificate.yaml
