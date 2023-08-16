@@ -28,7 +28,7 @@ args:
   - name: podinfo
     default:
       color: blue
-      replicas: 3
+      replicas: 1
   - name: force_legs
     default: false
 
